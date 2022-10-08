@@ -1,0 +1,18 @@
+.root{
+   padding: 100px;
+   max-width: 750px;
+    text-align: center;
+    margin:0 auto;
+   
+    span{
+        font-size: 64px;
+    }
+   
+
+}
+.description{
+    display: flex;
+    flex-direction: column;
+    font-size: 22px;
+    padding: 10px;
+}
