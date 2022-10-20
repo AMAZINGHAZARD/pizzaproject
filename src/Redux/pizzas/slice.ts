@@ -1,28 +1,8 @@
-import { SortItem } from './../../components/Sort';
-import { CartItem } from './cartSlice';
-
 import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
 import axios from 'axios';
+import { Pizza, PizzasSliceState, Status } from './types';
 
 
-type Pizza = {
-  id: string;
-  title: string;
-  price: number;
-  imageUrl: string;
-  types: number[];
-  sizes: number[];
-  text: string;
-};
-export enum Status {
-  LOADING = 'loading',
-  SUCCESS = 'success',
-  ERROR = 'error',
-}
-interface PizzasSliceState {
-  items: Pizza[];
-  status: Status;
-}
 
 const initialState: PizzasSliceState = {
   items: [],

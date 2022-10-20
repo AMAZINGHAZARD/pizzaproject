@@ -4,7 +4,7 @@ import Categories from '../components/Categories';
 import Sort, { list } from '../components/Sort';
 import PizzaBlock from '../components/PizzaBlock/PizzaBlock';
 import qs from 'qs';
-import { Link, useNavigate } from 'react-router-dom';
+import {useNavigate } from 'react-router-dom';
 
 import Pagination from '../components/Pagination/Pagination';
 import { Skeleton } from '../components/PizzaBlock/Skeleton';
@@ -16,12 +16,11 @@ import {
   setCategoryId,
   setCurrentPage,
   setFilters,
-} from '../Redux/slices/filterSlice';
+} from '../Redux/filter/slice';
 import {
-  setItems,
   fetchPizzas,
   SearchPizzaParams,
-} from '../Redux/slices/pizzasSlice';
+} from '../Redux/pizzas/slice';
 import { RootState, useAppDispatch } from '../Redux/store';
 
 export const Home: React.FC = () => {
